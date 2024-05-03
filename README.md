@@ -1,0 +1,2 @@
+# ai_realtime_translation_pipeline
+Realtime spoken translation pipeline
