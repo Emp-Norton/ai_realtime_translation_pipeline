@@ -12,7 +12,7 @@ client = OpenAI()
 def translate_text(text, source_lang='en', target_lang='el'):
     try:
         model = "gpt-4"
-        response = client.chat.completions.create(model=model, messages=[{"role": "user", "content": "Translate this text to Greek: 'Hello, how are you?'"},],temperature=0,)
+        response = client.chat.completions.create(model=model, messages=[{"role": "user", "content": f"Translate this text to {target_lang}: {text}"},],temperature=0,)
         translated_text = response.choices[0].message.content
         return translated_text
     except Exception as e:
